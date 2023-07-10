@@ -10,7 +10,6 @@ export default class Slide {
   }
 
   moveSlide(distX) {
-    this.dist.movePosition = distX;
     this.slide.style.transform = `translateX(${distX}px)`;
   }
 
@@ -32,9 +31,10 @@ export default class Slide {
       this.wrapper.removeEventListener("mousemove", this.onMove);
       this.wrapper.removeEventListener("mouseleave", this.onEnd);
     }
-    this.dist.finalPosition = this.dist.movePosition;
+    this.dist.finalPosition = this.dist.startX + this.dist.moviment;
     this.changeSlideOnEnd();
     this.transition(true);
+    this.dist.moviment = 0;
   }
 
   changeSlideOnEnd() {
