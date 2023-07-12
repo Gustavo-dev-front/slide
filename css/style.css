@@ -10,7 +10,6 @@
 img {
   display: block;
   max-width: 100%;
- 
 }
 
 .wrapper {
@@ -41,4 +40,25 @@ img {
 .slide li.active {
   opacity: 1;
   transform: scale(1);
+}
+
+[data-control="slide"] {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+[data-control="slide"] li a {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fb5;
+  text-indent: -999px;
+  overflow: hidden;
+}
+
+[data-control="slide"] li a:hover,
+[data-control="slide"] li.active a {
+  background-color: #e54;
 }
