@@ -62,3 +62,50 @@ img {
 [data-control="slide"] li.active a {
   background-color: #e54;
 }
+
+.custom-controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin: 15px;
+}
+
+.custom-controls li {
+  max-width: 50px;
+  max-height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  opacity: 0.8;
+  transform: scale(0.8);
+  transition: transform .3s, opacity .3s;
+}
+
+.custom-controls li.active {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.custom-controls li:hover {
+  cursor: pointer;
+}
+
+.arrow-nav {
+  display: flex;
+  justify-content: space-around;
+  margin: 15px 0;
+}
+
+.arrow-nav button {
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  width: 40px;
+  height: 40px;
+  background: #fb5 url(../imgs/arrow.svg) center center no-repeat;
+}
+
+.arrow-nav button.prev {
+  transform: rotate(180deg);
+}
